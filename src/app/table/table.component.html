@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Plan</th>
+        <th>Age</th>
+        <th class="btn btn-info" (click)="openNew = true">Add new</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="openNew">
+        <td>
+          <select [(ngModel)]="newRow.plan" class="col-8">
+            <option *ngFor="let option of planList" [value]="option.value">
+              {{ option.name }}
+            </option>
+          </select>
+        </td>
+        <td>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter age"
+            [(ngModel)]="newRow.age"
+          />
+        </td>
+        <td class="row">
+          <select [(ngModel)]="newRow.enable" class="col-8">
+            <option *ngFor="let option of yesNo" [value]="option.value">
+              {{ option.name }}
+            </option>
+          </select>
+
+          <p class="col-2" (click)="confirmAddNew()">
+            <i class="bi bi-check-circle-fill text-success"></i>
+          </p>
+
+          <p class="col-2" (click)="resetNew()">
+            <i class="bi bi-x-circle-fill text-danger"></i>
+          </p>
+        </td>
+      </tr>
+
+      <tr
+        *ngFor="let row of rowsList"
+        [ngClass]="{ 'table-danger': toRemove.includes(row.id) }"
+      >
+        <td>{{ row.plan }}</td>
+        <td>{{ row.age }}</td>
+        <td class="row m-0">
+          <select class="col-10" disabled [(ngModel)]="row.enable">
+            <option *ngFor="let option of yesNo" [value]="option.value">
+              {{ option.name }}
+            </option>
+          </select>
+
+          <p
+            *ngIf="row.uiAdded === 'Y'"
+            class="col-2"
+            (click)="deleteNew(row.id)"
+          >
+            <i class="bi bi-trash"></i>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="handleSave()">Save Changes</button>
+</div>
