@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -14,6 +16,8 @@ import { TableComponent } from './table/table.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    SidebarModule,
+    BrowserAnimationsModule
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PlanListConstant, YesNoConstant } from '../models/constants';
 import { PlanRequest } from '../models/people';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrl: './table.component.css'
+  styleUrl: './table.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class TableComponent implements OnInit {
+
+  sidebarVisible: boolean = false;
+
   rowsList: Array<PlanRequest> = [
     { id: 1, plan: 'John Doe', age: 28, enable: "Y", uiAdded: "N" },
     { id: 2, plan: 'Jane Smith', age: 32, enable: "N", uiAdded: "N" },

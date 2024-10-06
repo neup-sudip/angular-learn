@@ -1,4 +1,17 @@
-<div class="container mt-4">
+<p-sidebar [(visible)]="sidebarVisible" position="right">
+  <ng-template pTemplate="headless">
+    <div class="d-flex flex-row-reverse">
+      <p (click)="sidebarVisible = false"><i class="bi bi-x-circle-fill text-danger"></i></p>
+    </div>
+  </ng-template>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+</p>
+</p-sidebar>
+
+<button (click)="sidebarVisible = true">click</button>
+
+<div class="mt-4">
   <table class="table table-striped table-bordered">
     <thead class="thead-dark">
       <tr>
