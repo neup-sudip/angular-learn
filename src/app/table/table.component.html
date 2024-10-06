@@ -1,12 +1,15 @@
 <p-sidebar [(visible)]="sidebarVisible" position="right">
   <ng-template pTemplate="headless">
-    <div class="d-flex flex-row-reverse">
-      <p (click)="sidebarVisible = false"><i class="bi bi-x-circle-fill text-danger"></i></p>
+    <div class="mt-1 row">
+      <div class="col-10">
+        <p>Name</p>
+      </div>
+     
+        <i (click)="sidebarVisible = false" class="col-2 bi bi-x-circle text-danger"></i>
     </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
   </ng-template>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-</p>
 </p-sidebar>
 
 <button (click)="sidebarVisible = true">click</button>
