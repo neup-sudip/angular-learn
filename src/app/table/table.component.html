@@ -1,14 +1,8 @@
 <p-sidebar [(visible)]="sidebarVisible" position="right">
   <ng-template pTemplate="headless">
-    <div class="mt-1 row">
-      <div class="col-10">
-        <p>Name</p>
-      </div>
-     
-        <i (click)="sidebarVisible = false" class="col-2 bi bi-x-circle text-danger"></i>
-    </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <app-test-data (buttonClicked)="sidebarVisible = false"></app-test-data>
+
   </ng-template>
 </p-sidebar>
 
@@ -51,7 +45,7 @@
             <i class="bi bi-check-circle-fill text-success"></i>
           </p>
 
-          <p class="col-2" (click)="resetNew()">
+          <p class="col-2" type="button" (click)="resetNew()">
             <i class="bi bi-x-circle-fill text-danger"></i>
           </p>
         </td>
@@ -82,5 +76,10 @@
     </tbody>
   </table>
 
-  <button (click)="handleSave()">Save Changes</button>
 </div>
+
+<div class="row">
+  <button class="col-1 ms-auto btn btn-primary" (click)="handleSave()">Save Changes</button>
+</div>
+
+

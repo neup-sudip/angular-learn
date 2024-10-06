@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestDataComponent } from "./test-data/test-data.component";
 
 @NgModule({
   imports: [
@@ -18,14 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     SidebarModule,
     BrowserAnimationsModule
-
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-  ],
+    ,
+],
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    TestDataComponent
   ],
   bootstrap: [ AppComponent ]
 })
