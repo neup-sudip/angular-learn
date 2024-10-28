@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QrLoginComponent } from './qr-login/qr-login.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    QrLoginComponent
   ],
   bootstrap: [ AppComponent ]
 })
