@@ -1,0 +1,12 @@
+.modal.fade.show {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog-centered {
+  margin-left: 62.5%;
+  max-width: 25%;
+}
+
+.modal-content {
+  border-radius: 8px;
+}

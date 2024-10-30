@@ -1,10 +1,10 @@
-<p-sidebar [(visible)]="sidebarVisible" position="right">
-  <ng-template pTemplate="headless">
+<!-- <p-sidebar [(visible)]="sidebarVisible" position="right">
+  <ng-template pTemplate="headless"> -->
 
-    <app-test-data (buttonClicked)="sidebarVisible = false"></app-test-data>
-
+<app-test-bar *ngIf="sidebarVisible" (buttonClicked)="sidebarVisible = false"></app-test-bar>
+<!-- 
   </ng-template>
-</p-sidebar>
+</p-sidebar> -->
 
 <button (click)="sidebarVisible = true">click</button>
 
