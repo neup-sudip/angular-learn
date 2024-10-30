@@ -7,25 +7,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TestBarComponent {
 
-  @Output() buttonClicked: EventEmitter<void> = new EventEmitter<void>();
+  @Output() buttonClose: EventEmitter<void> = new EventEmitter<void>();
 
   confirmDialogVisible = false;
 
-  closeSidebar() {
-    this.buttonClicked.emit();
-  }
-
   openConfirmDialog() {
     this.confirmDialogVisible = true;
-  }
-
-  closeConfirmDialog(event: Event) {
-    if ((event.target as HTMLElement).classList.contains('modal')) {
-      this.confirmDialogVisible = false;
-    }
-  }
-
-  confirm() {
-    this.confirmDialogVisible = false;
   }
 }

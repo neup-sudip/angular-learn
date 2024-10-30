@@ -6,8 +6,8 @@
     </div>
 
    
-    <app-error-dialog *ngIf="confirmDialogVisible" (close)="confirmDialogVisible = false"></app-error-dialog>
+    <app-error-dialog *ngIf="confirmDialogVisible" (closeDialog)="confirmDialogVisible = false"></app-error-dialog>
   </div>
 
-  <div class="custome-backdrop" (click)="closeSidebar()"></div>
+  <div class="custome-backdrop" (click)="buttonClose.emit()"></div>
 </div>
