@@ -6,9 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './error-dialog.component.css'
 })
 export class ErrorDialogComponent {
-  @Output() close = new EventEmitter<void>(); 
+  @Output() closeDialog = new EventEmitter<void>(); 
 
   onClose() {
-    this.close.emit();
+    this.closeDialog.emit();
   }
 }
