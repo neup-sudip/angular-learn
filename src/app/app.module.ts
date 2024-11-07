@@ -7,9 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
-import { SidebarModule } from 'primeng/sidebar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QrLoginComponent } from './qr-login/qr-login.component';
+import { TestBarComponent } from './test-bar/test-bar.component';
+import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 
 @NgModule({
   imports: [
@@ -17,9 +17,8 @@ import { QrLoginComponent } from './qr-login/qr-login.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SidebarModule,
-    BrowserAnimationsModule
 
+    // ButtonModule
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -27,8 +26,10 @@ import { QrLoginComponent } from './qr-login/qr-login.component';
   declarations: [
     AppComponent,
     TableComponent,
-    QrLoginComponent
+    QrLoginComponent,
+    TestBarComponent,
+    ErrorDialogComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
