@@ -22,11 +22,6 @@
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.sidebar-content {
-  padding: 20px;
-  overflow-y: auto;
-}
-
 .custome-backdrop {
   position: fixed;
   top: 0;

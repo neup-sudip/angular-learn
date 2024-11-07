@@ -1,13 +1,15 @@
 <div class="sidebar-container">
   <div class="custom-sidebar">
-    <div class="sidebar-content">
-      <h4>Sidebar Content</h4>
-      <button class="btn btn-primary mt-3" (click)="openConfirmDialog()">Submit</button>
-    </div>
+    <h4>Sidebar Content</h4>
+    <button class="btn btn-primary mt-3" (click)="openConfirmDialog()">
+      Submit
+    </button>
 
-   
-    <app-error-dialog *ngIf="confirmDialogVisible" (close)="confirmDialogVisible = false"></app-error-dialog>
+    <app-error-dialog
+      *ngIf="confirmDialogVisible"
+      (closeDialog)="confirmDialogVisible = false"
+    ></app-error-dialog>
   </div>
 
-  <div class="custome-backdrop" (click)="closeSidebar()"></div>
+  <div class="custome-backdrop" (click)="buttonClose.emit()"></div>
 </div>
