@@ -18,14 +18,4 @@ export class TestBarComponent {
   openConfirmDialog() {
     this.confirmDialogVisible = true;
   }
-
-  closeConfirmDialog(event: Event) {
-    if ((event.target as HTMLElement).classList.contains('modal')) {
-      this.confirmDialogVisible = false;
-    }
-  }
-
-  confirm() {
-    this.confirmDialogVisible = false;
-  }
 }
